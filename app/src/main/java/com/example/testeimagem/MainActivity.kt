@@ -88,7 +88,7 @@ fun Cabecalho() {
         Text(
             modifier = Modifier
                 .padding(top = 1.dp),
-            text = "Rafael Pinheiro Costa",
+            text = "Rafael P Costa",
             color = Color.White,
             fontSize = 45.sp,
             fontWeight = FontWeight.Bold
