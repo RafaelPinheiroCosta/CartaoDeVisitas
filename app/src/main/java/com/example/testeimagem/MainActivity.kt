@@ -148,7 +148,7 @@ fun Contatos(painter: Painter, text:String){
     )
     Row (
         modifier = Modifier
-            .padding(top = 10.dp)
+            .padding(top = 10.dp, start = 30.dp)
     ){
 
         Image(
@@ -156,7 +156,7 @@ fun Contatos(painter: Painter, text:String){
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier
-                .size(35.dp)
+                .size(30.dp)
                 .clip(CircleShape)
         )
         Text(
