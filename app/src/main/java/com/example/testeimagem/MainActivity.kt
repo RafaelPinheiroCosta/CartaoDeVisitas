@@ -124,7 +124,7 @@ fun Rodape() {
 @Composable
 fun Contatos(painter: Painter, text:String){
 
-    Spacer(
+    Row (
         modifier = Modifier
             .drawWithCache {
                 val path = Path()
@@ -135,10 +135,6 @@ fun Contatos(painter: Painter, text:String){
                     drawPath(path, Color.Gray, style = Stroke(width = 3f))
                 }
             }
-            .fillMaxWidth()
-    )
-    Row (
-        modifier = Modifier
             .padding(top = 10.dp, start = 30.dp)
     ){
 
