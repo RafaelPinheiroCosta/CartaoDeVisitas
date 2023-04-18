@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Teste Imagem</string>
+    <string name="app_name">Cartão de Visitas</string>
+    <string name="nomeCompleto">Rafael Pinheiro Costa</string>
+    <string name="cargo">Professor de TI</string>
+    <string name="telefone">(11) 91234-5678</string>
+    <string name="email1">rafael.costa@sp.senai.br</string>
+    <string name="email2">rafaelcost@gmail.com</string>
 </resources>

@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.Divider
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -20,6 +21,7 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -79,9 +81,7 @@ fun Cabecalho() {
                 .size(200.dp)
         )
         Text(
-            modifier = Modifier
-                .padding(top = 1.dp),
-            text = "Rafael Costa",
+            text = stringResource(R.string.nomeCompleto),
             color = Color.White,
             fontSize = 45.sp,
             fontWeight = FontWeight.Bold
@@ -89,9 +89,9 @@ fun Cabecalho() {
         Text(
             modifier = Modifier
                 .padding(top = 5.dp),
-            text = "Professor",
+            text = stringResource(R.string.cargo),
             fontSize = 35.sp,
-            color = Color.Gray,
+            color = Color.Red,
             fontWeight = FontWeight.Bold
         )
     }
@@ -109,13 +109,16 @@ fun Rodape() {
     ) {
 
         Contatos(
-            painter = painterResource(id = R.drawable.iconetelefone),text = "(11) 91234-5678"
+            painter = painterResource(id = R.drawable.iconetelefone),
+            text = stringResource(R.string.telefone)
         )
         Contatos(
-            painter = painterResource(id = R.drawable.iconeemail), text = "rafael.costa@sp.senai.br"
+            painter = painterResource(id = R.drawable.iconeemail),
+            text = stringResource(R.string.email1)
         )
         Contatos(
-            painter = painterResource(id = R.drawable.iconeemail), text = "rafaelcost@gmail.com"
+            painter = painterResource(id = R.drawable.iconeemail),
+            text = stringResource(R.string.email2)
         )
     }
 
@@ -124,17 +127,15 @@ fun Rodape() {
 @Composable
 fun Contatos(painter: Painter, text:String){
 
+    Divider(
+        color = Color.LightGray,
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(0.5.dp)
+    )
+
     Row (
         modifier = Modifier
-            .drawWithCache {
-                val path = Path()
-                path.moveTo(0f, 0f)
-                path.lineTo(size.width, 0f)
-                path.close()
-                onDrawBehind {
-                    drawPath(path, Color.Gray, style = Stroke(width = 3f))
-                }
-            }
             .padding(top = 10.dp, start = 30.dp)
     ){
 
@@ -149,7 +150,7 @@ fun Contatos(painter: Painter, text:String){
         Text(
             text = text,
             fontSize = 25.sp,
-            color = Color.Gray,
+            color = Color.LightGray,
             textAlign = TextAlign.Left,
             modifier = Modifier
                 .fillMaxWidth()
@@ -158,7 +159,7 @@ fun Contatos(painter: Painter, text:String){
     }
 }
 
-@Preview(showBackground = true)
+@Preview(  )
 @Composable
 fun DefaultPreview() {
 
