@@ -62,8 +62,14 @@ fun ImagemFundo() {
         ){
             Cabecalho()
             Rodape()
+            Teste()
         }
     }
+}
+
+
+fun Teste() {
+
 }
 
 @Composable
